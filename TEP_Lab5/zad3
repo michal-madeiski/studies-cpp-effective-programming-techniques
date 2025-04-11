@@ -1,0 +1,14 @@
+1) Czy zmiast wskaźnika na konkretny typ, można przechowywać wskaźnik bardziej ogólny? Jeśli potrafisz
+   wskazać taki typ wskaźnikowy zastanów się, jakie będą wady i zalety takiego rozwiązania.
+2) Co się stanie, gdy inteligentny wskaźnik będzie przechowywać wskaźnik na pamięć zaalokowaną statycznie?
+--------------------------------------------------------------------------------------------------------------------
+1) Tak, jest to typ wskaźnikowy void*. Jest on wskaźnikiem ogólnym, który może przechowywać adres obiektu
+   dowolnego typu. Zaletą jest elastyczność i to, że w może być on kontenerem na wiele typów - oszczędność kodu
+   bo powstanie jeden wskaźnik a nie kilka. Wadą jednak jest brak kontroli typów np.: przy delete należy ręcznie
+   poprawnie rzutować wskaźnik na właściwy typ. Tak samo jeśli chce się przypisać wskaźnik ogólny do konkretnego
+   to trzeba zastosować odpowiednie rzutowanie, w drugą stronę rzutowanie nie jest konieczne.
+2) Inteligentny wskaźnik ma taką własność, że "wie kiedy się usunąć" np.: po zakończeniu działania funkcji. Jeśli
+   wskazywałby na pamięć zaalokowaną statycznie (lokalnie) to doszłoby do podwójnej próby usunięcia, gdyż pamięć
+   zaalokowana statycznie (lokalnie) jest zarządzana przez system a nie przez programistę. Z tego samego powodu
+   nie używa się delete do pamięci alokowanej statycznie (lokalnie). W zadaniu alokacja obiektu SmartPointer jest
+   statyczna (lokalna), więc SmartPointer "usuwa się sam" (zmniejsza o 1 RefCounter) np.: po wyjściu z funkcji.
