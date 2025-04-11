@@ -1,7 +1,7 @@
 # Effective Programming Techniques - laboratory classes
 __stage of studies: 2nd year, 3rd semester__
 
-Each lab class dir contains an implementation of given tasks.
+Each lab class dir contains an implementation of tasks about the given topic.
 
 * TEP_Lab1 - allocation and pointers
 * TEP_Lab2 - operators overloading
