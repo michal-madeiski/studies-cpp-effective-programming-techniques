@@ -12,5 +12,5 @@ Each lab class dir contains an implementation of tasks about the given topic.
 
 _TEP\_Lab[number] is a two-week homework assignment.<br>_
 _TEP\_Mod[number] is a live coding task called "modification" by the lab class instructor.<br>_
-_Mods for Lab2, Lab3 and Lab5 can be found in their dirs or directly in the code (marked wuth a comment).<br>_
+_Mods for Lab2, Lab3 and Lab5 can be found in their dirs or directly in the code (marked with a comment).<br>_
 _TEP_Proj is a four-week homework assignment._
